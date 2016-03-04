@@ -1,0 +1,8 @@
+$mod = map [
+	"version", [6,1],
+	"name", "MOD IsraelMod",
+	"description", "Adds Israel as a new region. All buildings available, including new flags of Middle Eastern countries.",
+	"installto", 2,
+	"author", "giladteller",
+	"homepage", "http://citiesinmotion.wikispaces.com/IsraelMod+by+giladteller"
+];
