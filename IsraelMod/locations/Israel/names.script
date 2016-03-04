@@ -1,0 +1,32 @@
+$firstNames = [];
+
+$firstNames[0] = ["Gilad", "Eyal", "David", "Shlomo", "Erez", "Ze'ev",
+  "Moshe", "Yehuda", "Arie", "Kfir", "Omer", "Daniel", "Yossi", "Avi",
+  "Yuval", "Omri", "Gil", "Boaz", "Menahem", "Ofer", "Itamar", "Elli",
+  "Elad", "Assaf", "Baruch", "Doron", "Dan", "Hagay", "Tal", "Yochay",
+  "Yiftach", "Lior", "Noam", "Roi", "Shay", "Tomer", "Tamir", "Shmuel",
+  "Yonatan", "Yitzhak", "Shimon", "Aharon", "Ya'akov", "Itay", "Uri", "Ido",
+  "Ariel", "Ofir", "Michael", "Ronen", "Haim", "Meir", "Gideon", "Amos", "Asher", "Dvir", "Yair"];
+
+$firstNames[1] = ["Rachel", "Efrat", "Hagit", "Nira", "Shiri", "Rotem", 
+  "Adi", "Ester", "Illanit", "Eti", "Galit", "Tali", "Varda",
+  "Talia", "Mor", "Na'ama", "Pnina", "Sara", "Lea", "Rivka", "Michal", 
+  "Dvora", "Sharon", "Noa", "Shira", "Yael", "Shirley",
+  "Tamar", "Maya", "Hila", "Bar", "Ma'ayan", "Sivan", "Bat-El", "Neta",
+  "Rinat", "Meirav", "Haya", "Sapir", "Mirit", "Shimrit", "Shani", "Avigail",
+  "Dana", "Dikla", "Dorit", "Gila", "Hadar", "Lital", "Meytal", "Moran", "Orit",
+  "Reut", "Shiran"];
+
+$lastNames = ["Teller", "Avivi", "Cohen", "Levi", "Fux", "Rokach", "Greenberg", "Nathan", 
+  "Hadad", "Golan", "Nirkin", "Israeli", "Hassid", "Goldberg", "Magen", "Tamir", 
+  "Meiri", "Dor", "Hershkovitz", "Zafrani", "Cahlon", "Elbaz", "Ganon", "Rosenberg", "Gur", 
+  "Klein", "Avni", "Shalev", "Gilat", "Berkovich", "Aviram", "Goldman", "Rosenthal", 
+  "Miller", "Feldman", "Fridman", "Malka", "Zverling", "Za'afrani", "Zertzer", "Mirsky", 
+  "Vaserman", "Bella", "Even", "Yavin", "Ravid", "Banay", "Meir", "Haruvi", 
+  "Shahar", "Dar", "Sharabi", "Evyatar", "Segev", "Manor", "Rom", "Kedem", "Rimon", 
+  "Shapira", "Dayan", "Revach", "Zilberman", "Glickman", "Katz", "Segal", "Dagan", "Amir", 
+  "Hasson", "Kam", "Shaul", "Tzafir", "Wallach", "Almagor", "Maron", "Rubin", "Ginat", 
+  "Nahum", "Peleg", "Bergman", "Ya'akobi", "Paz", "Har'el", "Segev", "Sharoni", 
+  "Rozen", "Ashkenazi", "Rotem", "Moskovich", "Bracha", "Ben Ami", "Ram", "Nahum", 
+  "Lipnik", "Biton", "Aharoni", "Hilel", "Refaeli", "Eldad", "Yefet", "Levin", 
+  "Sadan", "Yosef"];

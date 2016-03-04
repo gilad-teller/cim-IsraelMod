@@ -1,0 +1,11 @@
+this.width = 40;
+this.height = 1;
+this.length = 2;
+this.flags = GRID_ITEM_COVER | GRID_ITEM_LOCK_GROUND;
+this.type = 0;
+this.variation = 0;
+this.vertexGeneration = true;
+
+this.offsetx = 0;
+this.offsetz = 0;
+

@@ -1,0 +1,13 @@
+$grid = MAIN.$grid;
+$level = MAIN.$level;
+
+
+/* Flags */
+
+$level.loadProp("flags", "citybanner_khaim", "/addons/IsraelMod/objects/citybanner_khaim", true);
+$level.loadProp("flags", "cityflag_israel", "/addons/IsraelMod/objects/cityflag_israel", true);
+$level.loadProp("flags", "cityflag_egypt", "/addons/IsraelMod/objects/cityflag_egypt", true);
+$level.loadProp("flags", "cityflag_jordan", "/addons/IsraelMod/objects/cityflag_jordan", true);
+$level.loadProp("flags", "cityflag_lebanon", "/addons/IsraelMod/objects/cityflag_lebanon", true);
+$level.loadProp("flags", "cityflag_ps", "/addons/IsraelMod/objects/cityflag_ps", true);
+$level.loadProp("flags", "cityflag_syria", "/addons/IsraelMod/objects/cityflag_syria", true);

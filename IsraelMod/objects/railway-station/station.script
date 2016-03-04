@@ -1,0 +1,56 @@
+this.width = 6;
+this.height = 4;
+this.length = 16;
+this.flags = GRID_ITEM_LOCK_GROUND | GRID_ITEM_ALIGN_4 | GRID_ITEM_BRIDGE;
+this.diagonals = 0x0000;
+//this.vertexGeneration = true;
+this.type = GRID_ITEM_BUILDING;
+
+this.offsetx = 0;
+this.offsetz = 2;
+
+this.displayName = MAIN.$strings.$building_railwayStation;
+
+this.addWorkPlaces(GRID_CITIZEN_BLUE_COLLAR, 10);
+this.addWorkPlaces(GRID_CITIZEN_WHITE_COLLAR, 10);
+this.addWorkPlaces(GRID_CITIZEN_BUSINESS, 5);
+this.addWorkPlaces(GRID_CITIZEN_STUDENT, 10);
+this.addVisitPlaces(GRID_VISIT_SHOPPING, 20);
+this.addVisitPlaces(GRID_VISIT_LEISURE, 100);
+
+$occupations = [];
+$occupations[GRID_CITIZEN_BLUE_COLLAR] = MAIN.$strings.$occupation_railway_bluecollar;
+$occupations[GRID_CITIZEN_WHITE_COLLAR] = MAIN.$strings.$occupation_railway_whitecollar;
+$occupations[GRID_CITIZEN_BUSINESS] = MAIN.$strings.$occupation_railway_business;
+$occupations[GRID_CITIZEN_STUDENT] = MAIN.$strings.$occupation_railway_student;
+
+$objectinfoPattern = MAIN.$strings.$objectinfo_lastMonth_pattern;
+$objectinfoText = MAIN.$strings.$objectinfo_railwayStation;
+$objectinfoRange = [10, 20];
+
+event this.onPlace::($c) {
+  $c[] = "tokyo-station-track"; $c[] = -12; $c[] = -2; $c[] = 3; $c[] = 0;
+  $c[] = "tokyo-station-track"; $c[] = -12; $c[] = -2; $c[] = 7; $c[] = 0;
+  $c[] = "tokyo-station-track"; $c[] = -12; $c[] = -2; $c[] = 11; $c[] = 0;
+  $c[] = "station-platform"; $c[] = -12; $c[] = -2; $c[] = 1; $c[] = 0;
+  $c[] = "station-platform"; $c[] = -12; $c[] = -2; $c[] = 5; $c[] = 0;
+  $c[] = "station-platform"; $c[] = -12; $c[] = -2; $c[] = 9; $c[] = 0;
+  $c[] = "station-platform"; $c[] = -12; $c[] = -2; $c[] = 13; $c[] = 0;
+  $c[] = "station-road"; $c[] = 6; $c[] = 0; $c[] = 0; $c[] = 0;
+  $c[] = GRID_ITEM_LARGE_ROAD; $c[] = 8; $c[] = 0; $c[] = -6; $c[] = 0x00001000;
+  $c[] = GRID_ITEM_LARGE_ROAD; $c[] = 8; $c[] = 0; $c[] = 18; $c[] = 0x00000100;
+}
+
+$price = 2000000000;
+$appearanceYear = 1970;
+
+with ($querySound = new_sound(MAIN.$desktop)) {
+  .load("/metro/sounds/3. Railway structures 4.wav");
+  .volume = 1.0;
+  .relative = true;
+}
+
+event this.onDestroy::() {
+  delete $querySound;
+}
+

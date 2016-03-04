@@ -1,0 +1,396 @@
+$grid = MAIN.$grid;
+$level = MAIN.$level;
+
+$modmanager = defined MAIN.$modmanager;
+if ($modmanager) {
+	$usa = MAIN.$modmanager.Mod_isActive("usa");
+	$tokyo = MAIN.$modmanager.Mod_isActive("tokyo");
+	$germany = MAIN.$modmanager.Mod_isActive("germany");
+	$ulm = MAIN.$modmanager.Mod_isActive("ulm");
+	$paris = MAIN.$modmanager.Mod_isActive("paris");
+	$stpetersburg = MAIN.$modmanager.Mod_isActive("stpetersburg");
+	$london = MAIN.$modmanager.Mod_isActive("london");
+}
+else {
+	$usa = file_exists("addons/usa/buildings/statue-of-liberty/statue-of-liberty.object");
+	$tokyo = file_exists("addons/tokyo/buildings/park-tower/park_tower.object");
+	$germany = file_exists("addons/germany/buildings/colognedom/colognedom.object");
+	$ulm = file_exists("addons/ulm/buildings/library/kuutio.object");
+	$paris = file_exists("addons/paris/buildings/eiffel-tower/eiffel_tower.object");
+	$stpetersburg = file_exists("addons/stpetersburg/buildings/winter-palace/winter_palace01.object");
+	$london = file_exists("addons/london/buildings/bigben-westminster/big_ben.object");
+}
+
+// Europe
+$level.loadBuilding("government", "cityhall", "buildings/cityhall/cityhall");
+$level.loadBuilding("government", "government-offices", "buildings/government-offices/governmentoffices");
+$level.loadBuilding("government", "hospital", "buildings/hospital/hospital");
+$level.loadBuilding("government", "police-station", "buildings/police-station/policestation", 10, 10);
+$level.loadBuilding("leisure", "church", "buildings/church/church", 11, 17);
+$level.loadBuilding("leisure", "cathedral", "buildings/cathedral/cathedral");
+$level.loadBuilding("leisure", "stadion", "buildings/stadion/stadion");
+$grid.loadGridObject("football-anim", "metro/objects/buildings/stadion/football_scene-combined.object");
+$level.loadBuilding("leisure", "theatre", "buildings/theatre/theatre");
+$level.loadBuilding("leisure", "tenniscourt", "buildings/tenniscourt/tenniscourt");
+$grid.loadGridObject("tennisanim", "metro/objects/buildings/tenniscourt/tennis_anim-combined.object");
+$level.loadBuilding("leisure", "cinema", "buildings/cinema/cinema", 11, 20);
+$level.loadBuilding("leisure", "golf-club", "buildings/golf-club/golfclub", 13, 10);
+$level.loadBuilding("leisure", "library", "buildings/library/library");
+$level.loadBuilding("commercial", "petrolstation01", "buildings/petrolstation01/petrolstation01", 9, 7);
+$level.loadBuilding("commercial", "fastfood", "buildings/fastfood/fastfood", 5, 8);
+$level.loadBuilding("commercial", "deptstore", "buildings/department-store/deptstore");
+$level.loadBuilding("commercial", "hypermarket", "buildings/hypermarket/hypermarket");
+$level.loadBuilding("commercial", "grocery", "buildings/grocery/grocery", 18, 11);
+$level.loadBuilding("commercial", "grocerysign01", "buildings/grocery/grocerysign01");
+$level.loadBuilding("commercial", "grocerysign02", "buildings/grocery/grocerysign02");
+$level.loadBuilding("workplace", "fire-station", "buildings/fire-station/firestation", 13, 12);
+$level.loadBuilding("workplace", "college", "buildings/college/college");
+$level.loadBuilding("workplace", "cargocenter", "buildings/cargocenter/cargocenter", 24, 24);
+$level.loadBuilding("workplace", "mofficebuilding01", "buildings/med-officebldg01/med_officebldg01", 8, 10, 5, 8);
+$level.loadBuilding("workplace", "mofficebuilding02", "buildings/med-officebldg02/med_officebldg02", 6, 7);
+$level.loadBuilding("industry", "autoplant", "buildings/autoplant/autoplant");
+$level.loadBuilding("industry", "s_warehouse01", "buildings/small-warehouses/s_warehouse01", 12, 8);
+$level.loadBuilding("industry", "s_warehouse02", "buildings/small-warehouses/s_warehouse02", 10, 7);
+$level.loadBuilding("industry", "s_warehouse03", "buildings/small-warehouses/s_warehouse03", 8, 5);
+$level.loadBuilding("industry", "s_warehouse04", "buildings/small-warehouses/s_warehouse04", 8, 6);
+$level.loadBuilding("armybase", "barracks", "buildings/army-base/barracks", 14, 6);
+$level.loadBuilding("armybase", "staff-building2", "buildings/army-base/staff-building", 8, 6);
+$level.loadBuilding("armybase", "army-carage", "buildings/army-base/carage", 7, 5);
+$level.loadBuilding("armybase", "army-gate", "buildings/army-base/gate");
+$level.loadBuilding("farm", "farmhouse", "buildings/farm/farmhouse");
+$level.loadBuilding("farm", "stockyard", "buildings/farm/stockyard", 7, 7);
+$level.loadBuilding("farm", "barn", "buildings/farm/barn");
+$level.loadBuilding("farm", "piggery", "buildings/farm/piggery");
+$level.loadBuilding("farm", "farm-silo", "buildings/farm/silo");
+$level.loadBuilding("farm", "greenhouse", "buildings/farm/greenhouse", 6, 8);
+$level.loadBuilding("residential", "villa01", "buildings/villas/villa01", 10, 14);
+$level.loadBuilding("residential", "villa02", "buildings/villas/villa02", 7, 8);
+$level.loadBuilding("residential", "villa03", "buildings/villas/villa03", 8, 12, 6, 9);
+$level.loadBuilding("residential", "tenement02", "buildings/tenements/tenement02", 5, 10);
+$level.loadBuilding("residential", "detached01", "buildings/detached-houses/detachedhouse01", 5, 6);
+$level.loadBuilding("residential", "detached02", "buildings/detached-houses/detachedhouse02", 5, 6);
+$level.loadBuilding("residential", "detached03", "buildings/detached-houses/detachedhouse03", 5, 6);
+$level.loadBuilding("residential", "semidetached", "buildings/detached-houses/detachedhouse04", 6, 6);
+$level.loadBuilding("residential", "hotel01", "buildings/hotel01/hotel01", 14, 16);
+$level.loadBuilding("residential", "apartment01", "buildings/apartments/apartmentbldg01", 7, 5);
+$level.loadBuilding("residential", "apartment02", "buildings/apartments/apartmentbldg02", 7, 6);
+$level.loadBuilding("blockhouses", "blockhouse01", "buildings/blockhouses/blockhouse01", 6, 6);
+$level.loadBuilding("blockhouses", "blockhouse02", "buildings/blockhouses/blockhouse02", 6, 6);
+$level.loadBuilding("blockhouses", "blockhouse03", "buildings/blockhouses/blockhouse03", 9, 5);
+$level.loadBuilding("blockhouses", "diagonalhouse1", "buildings/diagonalhouses/diagonalhouse01");
+$level.loadBuilding("blockhouses", "diagonalhouse2", "buildings/diagonalhouses/diagonalhouse02", 7, 7);
+$level.loadBuilding("blockhouses", "diagonalhouse3", "buildings/diagonalhouses/diagonalhouse03");
+$level.loadBuilding("blockhouses", "cornerhouse01", "buildings/cornerhouse01/cornerhouse01", 6, 6);
+$level.loadBuilding("blockhouses", "cornerhouse02", "buildings/cornerhouse02/cornerhouse02", 6, 6);
+$level.loadBuilding("blockhouses", "cornerhouse03", "buildings/cornerhouse03/cornerhouse03", 7, 5, 5, 3);
+$level.loadBuilding("blockhouses", "cornerhouse04", "buildings/cornerhouse04/swisshouse", 7, 7);
+$level.loadBuilding("blockhouses", "cornerhouse05", "buildings/cornerhouse05/cornerhouse05", 6, 6);
+$level.loadBuilding("blockhouses", "cornerhouse06", "buildings/cornerhouse06/cornerhouse06", 7, 8);
+$level.loadBuilding("blockhouses", "cityhouse01", "buildings/cityhouse01/cityhouse01", 4, 5);
+$level.loadBuilding("blockhouses", "cityhouse02", "buildings/cityhouse02/cityhouse02", 4, 5);
+$level.loadBuilding("blockhouses", "cityhouse03", "buildings/cityhouse03/cityhouse03", 5, 5);
+$level.loadBuilding("blockhouses", "cityhouse04", "buildings/cityhouse04/cityhouse04", 7, 5);
+$level.loadBuilding("blockhouses", "small-townbuilding01", "buildings/small-townbuildings/small_town_bldg_01", 4, 5);
+$level.loadBuilding("blockhouses", "small-townbuilding02", "buildings/small-townbuildings/small_town_bldg_02", 4, 5);
+$level.loadBuilding("blockhouses", "small-townbuilding03", "buildings/small-townbuildings/small_town_bldg_03", 4, 5);
+$level.loadBuilding("blockhouses", "small-townbuilding04", "buildings/small-townbuildings/small_town_bldg_04", 5, 5);
+$level.loadBuilding("blockhouses", "dam-house-01", "buildings/damhouses/damhouse01", 3, 5);
+$level.loadBuilding("blockhouses", "dam-house-02", "buildings/damhouses/damhouse02", 3, 5);
+$level.loadBuilding("blockhouses", "dam-house-03", "buildings/damhouses/damhouse03", 3, 5);
+$level.loadBuilding("railway", "railway-terminal", "buildings/railway-terminal/railway-terminal");
+$grid.loadGridObject("terminal-track", "metro/objects/buildings/railway-terminal/terminal-track.object");
+$grid.loadGridObject("terminal-platform-a", "metro/objects/buildings/railway-terminal/terminal-platform-a.object");
+$grid.loadGridObject("terminal-platform-b", "metro/objects/buildings/railway-terminal/terminal-platform-b.object");
+$level.loadBuilding("railway", "railway-station", "buildings/railway-terminal/railway-station");
+$grid.loadGridObject("station-track", "metro/objects/buildings/railway-terminal/station-track.object");
+$level.loadBuilding("railway", "signal-box", "buildings/railway-terminal/signal-box", 4, 2);
+$level.loadBuilding("railway", "railway-water-tower", "buildings/railway-terminal/water-tower");
+$level.loadBuilding("airport", "large-airport-terminal", "buildings/airport/large-terminal");
+$level.loadBuilding("airport", "small-airport-terminal", "buildings/airport/small-terminal");
+$level.loadBuilding("airport", "airport-tower", "buildings/airport/tower");
+$level.loadBuilding("airport", "small-hangar", "buildings/airport/small-hangar");
+$level.loadBuilding("airport", "airport-platform", "buildings/airport/platform");
+$level.loadBuilding("airport", "runway-end", "buildings/airport/runway-end");
+$level.loadBuilding("airport", "runway-middle", "buildings/airport/runway-middle");
+$level.loadBuilding("airport", "runway-crossing", "buildings/airport/runway-crossing");
+$level.loadBuilding("airport", "taxiway", "buildings/airport/taxiway");
+$level.loadBuilding("airport", "taxiway-turn", "buildings/airport/taxiway-turn");
+$level.loadBuilding("airport", "taxiway-to-runway", "buildings/airport/taxiway-to-runway");
+$level.loadBuilding("airport", "taxiway-junction3", "buildings/airport/taxiway-junction3");
+$level.loadBuilding("airport", "taxiway-junction4", "buildings/airport/taxiway-junction4");
+$level.loadBuilding("workplace", "officebuilding01", "buildings/officebuilding01/officebuilding01", 18, 13);
+$level.loadBuilding("workplace", "officebuilding02", "buildings/officebuilding01/officebuilding02", 10, 13);
+$level.loadBuilding("workplace", "officebuilding03", "buildings/officebuilding03/officebuilding03");
+$level.loadBuilding("workplace", "officebuilding04", "buildings/officebuilding03/officebuilding04", 14, 10);
+$level.loadBuilding("leisure", "ferris-wheel", "buildings/amusement-park/ferris-wheel/ferris-wheel");
+$level.loadBuilding("leisure", "merry-go-round", "buildings/amusement-park/merry-go-round");
+$level.loadBuilding("leisure", "roller-coaster", "buildings/amusement-park/roller-coaster/roller-coaster");
+$level.loadBuilding("leisure", "amusement-park-gate", "buildings/amusement-park/gate", 16, 3);
+$level.loadBuilding("leisure", "tent", "buildings/amusement-park/tent");
+$level.loadBuilding("commercial", "petrolstation02", "buildings/petrolstation01/petrolstation02", 9, 7);
+$level.loadBuilding("commercial", "pgarage", "buildings/pgarage/parking-garage", 17, 14);
+$level.loadBuilding("commercial", "shoppingcenter", "buildings/shoppingcenter/shoppingcenter");
+$level.loadBuilding("industry", "toolfactory", "buildings/toolfactory/toolfactory", 13, 14);
+$level.loadBuilding("industry", "shoe_factory_01", "buildings/shoefactory/shoe_factory_01");
+$level.loadBuilding("industry", "brewery", "buildings/brewery/brewery");
+$level.loadBuilding("industry", "m_factory01", "buildings/med-factory01/m_factory01");
+$level.loadBuilding("industry", "s_factory01", "buildings/small-factory01/smallfactory01", 11, 10, 7, 8);
+$level.loadBuilding("industry", "refinery", "buildings/refinery/refinery");
+$level.loadBuilding("industry", "blast-furnace", "buildings/steel-mill/blast-furnace", 21, 12);
+$level.loadBuilding("industry", "coal-conveyor", "buildings/steel-mill/coal-conveyor", 18, 16);
+$level.loadBuilding("industry", "combustion-plant", "buildings/steel-mill/combustion-plant", 12, 8);
+$level.loadBuilding("residential", "tenement01", "buildings/tenements/tenement01", 15, 11);
+$level.loadBuilding("residential", "tenement03", "buildings/tenements/tenement03", 8, 8);
+$level.loadBuilding("residential", "apartment03", "buildings/apartments/apartmentbldg03", 7, 7);
+$level.loadBuilding("industry", "forge", "buildings/forge/forge", 6, 8);
+$level.loadBuilding("industry", "foodfactory", "buildings/foodfactory/foodfactory", 16, 10);
+$level.loadBuilding("industry", "large-open-tank", "buildings/refinery/large_tank");
+$level.loadBuilding("industry", "medium-tank", "buildings/refinery/medium-tank");
+$level.loadBuilding("industry", "small-tank", "buildings/refinery/small-tank", 2, 3, 2, 2);
+$level.loadBuilding("industry", "gas-bell", "buildings/refinery/gas-bell");
+$level.loadBuilding("industry", "tall-tanks", "buildings/refinery/tall-tanks", 3, 6);
+$level.loadBuilding("industry", "distillation-column", "buildings/refinery/distillation-column");
+$level.loadBuilding("industry", "gas-tank", "buildings/steel-mill/gas-tank");
+$level.loadBuilding("industry", "cooling-tower", "buildings/steel-mill/cooling-tower");
+
+$level.loadBuilding("landmarks", "brandenburg-gate", "buildings/brandenburg-gate/brandenburg-gate");
+$level.loadBuilding("landmarks", "dam-palace", "buildings/dam-palace/dam_palace");
+$level.loadBuilding("landmarks", "parliament", "buildings/parliament/parliament_house");
+$level.loadBuilding("landmarks", "munich-rathaus", "/addons/munich/buildings/rathaus/munich_rathaus");
+$level.loadBuilding("landmarks", "munich-mariensaule", "/addons/munich/buildings/mariensaule/mariensaule");
+$level.loadBuilding("landmarks", "hofburg", "buildings/hofburg/hofburg");
+
+// Tokyo
+if ($tokyo) {
+$level.loadBuilding("commercial", "tokyo_fastfood", "/addons/tokyo/buildings/fastfood/fastfood");
+$level.loadBuilding("commercial", "shopping-center", "/addons/tokyo/buildings/shopping-center/shopping_center");
+$level.loadBuilding("commercial", "commercial01", "/addons/tokyo/buildings/commercial-01/commercial01", 3, 7);
+$level.loadBuilding("commercial", "commercial02", "/addons/tokyo/buildings/commercial-02/commercial02", 5, 7);
+$level.loadBuilding("commercial", "commercial03", "/addons/tokyo/buildings/commercial-03/commercial03", 14, 7);
+$level.loadBuilding("commercial", "commercial04", "/addons/tokyo/buildings/commercial-04/commercial04", 4, 6);
+$level.loadBuilding("commercial", "commercial05", "/addons/tokyo/buildings/commercial-05/commercial05", 4, 8);
+$level.loadBuilding("commercial", "cornerbuilding01", "/addons/tokyo/buildings/corner-building-01/cornerbuilding01");
+$level.loadBuilding("commercial", "cornerbuilding02", "/addons/tokyo/buildings/corner-building-02/cornerbuilding02");
+$level.loadBuilding("commercial", "cornerbuilding03", "/addons/tokyo/buildings/corner-building-03/cornerbuilding03");
+$level.loadBuilding("residential", "apartment04", "/addons/tokyo/buildings/apartment-building-04/apartment_building04", 4, 7);
+$level.loadBuilding("workplace", "fire-station1", "/addons/tokyo/buildings/fire-station/fire_station");
+$level.loadBuilding("workplace", "highschool", "/addons/tokyo/buildings/highschool/highschool");
+$level.loadBuilding("commercial", "tokyo_grocery", "/addons/tokyo/buildings/grocery/grocery", 7, 4);
+$level.loadBuilding("residential", "tokyo_detached01", "/addons/tokyo/buildings/detached-house-01/detached_house01", 4, 4);
+$level.loadBuilding("residential", "tokyo_detached02", "/addons/tokyo/buildings/detached-house-01/detached_house02", 2, 3, 2, 2);
+$level.loadBuilding("residential", "tokyo_semidetached01", "/addons/tokyo/buildings/semi-detached-01/semidetached_house01", 4, 3);
+$level.loadBuilding("residential", "tokyo_semidetached02", "/addons/tokyo/buildings/semi-detached-01/semidetached_house02", 5, 5);
+$level.loadBuilding("residential", "ryokan", "/addons/tokyo/buildings/ryokan/ryokan", 6, 6);
+$level.loadBuilding("railway", "tokyo-railway-station", "/addons/IsraelMod/objects/railway-station/station");
+$grid.loadGridObject("tokyo-station-track", "addons/IsraelMod/objects/railway-station/station-track.object");
+$grid.loadGridObject("station-platform", "addons/IsraelMod/objects/railway-station/station-platform.object");
+$grid.loadGridObject("station-road", "addons/IsraelMod/objects/railway-station/station-road.object");
+$level.loadBuilding("leisure", "senso-jin-gate", "/addons/tokyo/buildings/sensojin-temple/kaminarimon", 11, 6);
+$level.loadBuilding("leisure", "senso-jin-temple", "/addons/tokyo/buildings/sensojin-temple/senso-jin", 16, 16);
+$level.loadBuilding("leisure", "temple-01", "/addons/tokyo/buildings/temple-01/temple01", 11, 6);
+$level.loadBuilding("leisure", "temple-02", "/addons/tokyo/buildings/temple-01/temple02", 6, 6);
+$level.loadBuilding("government", "tokyo_police-station", "/addons/tokyo/buildings/police-station/police_station");
+$level.loadBuilding("leisure", "kabuki-theatre", "/addons/tokyo/buildings/theatre/kabuki-theatre", 17, 22, 12, 15);
+$level.loadBuilding("leisure", "tokyo_cinema", "/addons/tokyo/buildings/cinema/cinema", 5, 7);
+
+$level.loadBuilding("landmarks", "park-tower", "/addons/tokyo/buildings/park-tower/park_tower");
+$grid.loadGridObject("park-tower-anim", "addons/tokyo/buildings/park-tower/partypeople-combined.object");
+$level.loadBuilding("landmarks", "tokyo-tower", "/addons/tokyo/buildings/tokyo-tower/tokyo_tower");
+$level.loadBuilding("landmarks", "sky-tree", "/addons/tokyo/buildings/sky-tree/sky_tree");
+}
+
+// USA
+if ($usa) {
+$level.loadBuilding("blockhouses", "sf-blockhouse11", "/addons/usa/buildings/sf-blockhouse11-13/blockhouse11", 3, 9);
+$level.loadBuilding("blockhouses", "sf-blockhouse12", "/addons/usa/buildings/sf-blockhouse11-13/blockhouse12", 3, 6);
+$level.loadBuilding("blockhouses", "sf-blockhouse13", "/addons/usa/buildings/sf-blockhouse11-13/blockhouse13", 3, 10);
+$level.loadBuilding("residential", "sf-detached01", "/addons/usa/buildings/sf-detachedhouse01-02/detached_houses_SF_01", 9, 12);
+$level.loadBuilding("residential", "sf-detached02", "/addons/usa/buildings/sf-detachedhouse01-02/detached_houses_SF_02", 5, 10);
+$level.loadBuilding("residential", "sf-detached03", "/addons/usa/buildings/sf-detachedhouse03-04/detached_houses_SF_03", 3, 7);
+$level.loadBuilding("residential", "sf-detached04", "/addons/usa/buildings/sf-detachedhouse03-04/detached_houses_SF_4", 5, 7);
+$level.loadBuilding("residential", "sf-semidetached01", "/addons/usa/buildings/sf-semidetached01/semi_detachedhouses_SF_01", 4, 8);
+$level.loadBuilding("residential", "sf-semidetached02", "/addons/usa/buildings/sf-semidetached02-03/semi_detachedhouses_SF_02", 6, 7);
+$level.loadBuilding("residential", "sf-semidetached03", "/addons/usa/buildings/sf-semidetached02-03/semi-detachedhouse03", 4, 6);
+$level.loadBuilding("residential", "sf-apartment01", "/addons/usa/buildings/sf-apartment-building-01/apartment01", 7, 4);
+$level.loadBuilding("residential", "sf-apartment02", "/addons/usa/buildings/sf-apartment-building-02/apartment02", 7, 5);
+$level.loadBuilding("residential", "sf-apartment03", "/addons/usa/buildings/sf-apartment-building-03/apartmentbuilding03_SF", 5, 10);
+$level.loadBuilding("residential", "ny-detached04", "/addons/usa/buildings/detachedhouse03-04/detached_houses_NY_4", 2, 7);
+$level.loadBuilding("residential", "ny-semidetached04", "/addons/usa/buildings/semidetached03-04/semidetached04", 4, 6);
+$level.loadBuilding("residential", "ny-apartment01", "/addons/usa/buildings/apartment-building01/apartmentbldg01", 6, 12);
+$level.loadBuilding("residential", "ny-apartment02", "/addons/usa/buildings/apartment-building02/apartment-building02", 6, 10);
+$level.loadBuilding("residential", "ny-apartment03", "/addons/usa/buildings/apartment-building03/apartmentbldg03", 6, 10);
+$level.loadBuilding("residential", "ny-apartment04", "/addons/usa/buildings/apartment-building04/apartment-building04", 7, 17);
+$level.loadBuilding("residential", "ny-apartment05", "/addons/usa/buildings/apartment-building05/apartment-building05", 14, 16);
+$level.loadBuilding("residential", "ny-apartment06", "/addons/usa/buildings/apartment-building06/apartment-building06_NY", 5, 13);
+$level.loadBuilding("leisure", "us-basketball-field", "/addons/usa/buildings/basketball-field/basketball_field");
+$grid.loadGridObject("basketball-anim", "addons/usa/buildings/basketball-field/animation_scene-combined.object");
+$level.loadBuilding("residential", "tenement-01", "/addons/usa/buildings/sf-tenement-01/tenement01", 8, 6);
+$level.loadBuilding("residential", "tenement-02", "/addons/usa/buildings/sf-tenement-02/tenement02", 7, 7);
+$level.loadBuilding("residential", "tenement-03", "/addons/usa/buildings/sf-tenement-03/tenement03", 7, 5);
+$level.loadBuilding("residential", "tenement-04", "/addons/usa/buildings/sf-tenement-04/tenement04", 8, 10);
+$level.loadBuilding("workplace", "officebuilding05", "/addons/usa/buildings/sf-office-building-05/office_building05");
+$level.loadBuilding("workplace", "officebuilding06", "/addons/usa/buildings/sf-office-building-06/office_building06", 17, 11);
+$level.loadBuilding("commercial", "commercial01-b", "/addons/usa/buildings/sf-commercial-01-b/commercial01b", 3, 7);
+$level.loadBuilding("commercial", "commercial02-b", "/addons/usa/buildings/sf-commercial-02-b/commercial02b", 5, 7);
+$level.loadBuilding("commercial", "commercial04-b", "/addons/usa/buildings/sf-commercial-04-b/commercial04b", 4, 6);
+$level.loadBuilding("commercial", "cornerbuilding03-b", "/addons/usa/buildings/sf-corner-building-03-b/cornerbuilding03b");
+$level.loadBuilding("commercial", "cornerbuilding04", "/addons/usa/buildings/sf-corner-building-04/cornerbuilding04");
+$level.loadBuilding("workplace", "officebuilding07", "/addons/usa/buildings/sf-office-building-07/office_building07", 14, 22, 10, 15);
+$level.loadBuilding("industry", "m_factory02", "/addons/usa/buildings/sf-medium-factory/medium_factory", 21, 12);
+$level.loadBuilding("workplace", "office-building01", "/addons/usa/buildings/sf-office-building01/office-building01", 12, 12);
+$level.loadBuilding("workplace", "office-building02", "/addons/usa/buildings/sf-office-building02/office-building02", 21, 12);
+$level.loadBuilding("workplace", "office-building03", "/addons/usa/buildings/sf-office-building03/office-building03", 18, 9);
+$level.loadBuilding("workplace", "office-building04", "/addons/usa/buildings/sf-office-building04/office-building04", 11, 20);
+$level.loadBuilding("commercial", "fastfood02", "/addons/usa/buildings/sf-fastfood02-grocery/fastfood02", 5, 10);
+$level.loadBuilding("commercial", "skyscraper01", "/addons/usa/buildings/sf-skyscraper01/skyscraper01", 17, 12);
+$level.loadBuilding("commercial", "skyscraper02", "/addons/usa/buildings/sf-skyscraper02/skyscraper02", 22, 10, 15, 7);
+$level.loadBuilding("commercial", "skyscraper03", "/addons/usa/buildings/sf-skyscraper03/skyscraper03", 16, 9);
+$level.loadBuilding("commercial", "low-commercial01", "/addons/usa/buildings/sf-low_commercial01-03/low_commercial01", 3, 6);
+$level.loadBuilding("commercial", "low-commercial03", "/addons/usa/buildings/sf-low_commercial01-03/low_commercial03", 4, 6);
+$level.loadBuilding("residential", "us-tenement02", "/addons/usa/buildings/sf-tenement01/tenement01", 15, 14);
+$level.loadBuilding("blockhouses", "us-blockhouse01", "/addons/usa/buildings/sf-blockhouse01-04/blockhouse01", 3, 10);
+$level.loadBuilding("blockhouses", "us-blockhouse02", "/addons/usa/buildings/sf-blockhouse01-04/blockhouse02", 5, 10);
+$level.loadBuilding("blockhouses", "us-blockhouse03", "/addons/usa/buildings/sf-blockhouse01-04/blockhouse03", 6, 10);
+$level.loadBuilding("blockhouses", "us-blockhouse04", "/addons/usa/buildings/sf-blockhouse01-04/blockhouse04", 8, 10);
+$level.loadBuilding("blockhouses", "us-blockhouse05", "/addons/usa/buildings/sf-blockhouse05-06-09/blockhouse05", 3, 7);
+$level.loadBuilding("blockhouses", "us-blockhouse06", "/addons/usa/buildings/sf-blockhouse05-06-09/blockhouse06", 3, 7);
+$level.loadBuilding("blockhouses", "us-blockhouse07", "/addons/usa/buildings/sf-blockhouse07-08/blockhouse07", 2, 5);
+$level.loadBuilding("blockhouses", "us-blockhouse08", "/addons/usa/buildings/sf-blockhouse07-08/blockhouse08", 5, 6);
+$level.loadBuilding("blockhouses", "us-blockhouse09", "/addons/usa/buildings/sf-blockhouse05-06-09/blockhouse09", 10, 4);
+$level.loadBuilding("blockhouses", "us-blockhouse10", "/addons/usa/buildings/sf-blockhouse10/blockhouse10", 10, 3);
+$level.loadBuilding("workplace", "us-fire-station", "/addons/usa/buildings/sf-police-fire-station/fire_station", 3, 10);
+$level.loadBuilding("commercial", "us-deptstore", "/addons/usa/buildings/sf-department-store/Department_store_NY");
+$level.loadBuilding("commercial", "us-grocery", "/addons/usa/buildings/sf-fastfood02-grocery/grocery", 5, 10);
+$level.loadBuilding("government", "us-police-station", "/addons/usa/buildings/sf-police-fire-station/police_station", 6, 10);
+$level.loadBuilding("residential", "us-apartment04", "/addons/usa/buildings/sf-apartment-building-04/apartment_building01", 5, 4);
+$level.loadBuilding("residential", "us-apartment05", "/addons/usa/buildings/sf-apartment-building-05/apartment_building02", 7, 4);
+$level.loadBuilding("government", "us-hospital", "/addons/usa/buildings/sf-hospital/hospital_tokyo");
+$level.loadBuilding("leisure", "us-stadion", "/addons/usa/buildings/sf-baseball-stadium/baseball_stadium");
+$level.loadBuilding("leisure", "us-theatre", "/addons/usa/buildings/sf-theatre/theatre", 8, 10);
+
+$level.loadBuilding("landmarks", "us-lombard-street", "/addons/usa/roads/lombard-street-a");
+$grid.loadGridObject("lombard-street-b", "addons/usa/roads/lombard-street-b.object");
+$grid.loadGridObject("lombard-street-c", "addons/usa/roads/lombard-street-c.object");
+$level.loadBuilding("landmarks", "transamerica-pyramid", "/addons/usa/buildings/sf-transamerica-pyramid/transamerica_pyramid", 15, 15);
+$level.loadBuilding("landmarks", "empire-state-building", "/addons/usa/buildings/empire-state-building/empire_state_building");
+$level.loadBuilding("landmarks", "central-station", "/addons/usa/buildings/central-station/central-station");
+$level.loadBuilding("landmarks", "us-statue-of-liberty", "/addons/usa/buildings/statue-of-liberty/statue-of-liberty");
+}
+
+// Germany
+if ($germany) {
+$level.loadBuilding("landmarks", "leipzig-thomaskirche", "/addons/germany/buildings/thomaskirche/Thomaskirche");
+$level.loadBuilding("landmarks", "cologne-cathedral", "/addons/germany/buildings/colognedom/colognedom");
+$level.loadBuilding("landmarks", "cologne-koelnmesse", "/addons/germany/buildings/koelnmesse/Koelnmesse");
+}
+
+// Ulm
+if ($ulm) {
+$level.loadBuilding("landmarks", "ulm-minster", "/addons/ulm/buildings/minster/Minster");
+$level.loadBuilding("landmarks", "ulm-library", "/addons/ulm/buildings/library/kuutio");
+}
+
+// Paris
+if ($paris) {
+$level.loadBuilding("commercial", "paris_low-commercial-01", "/addons/paris/buildings/low-commercial-01/low_commercial01", 5, 6);
+$level.loadBuilding("commercial", "paris_low-commercial-02", "/addons/paris/buildings/low-commercial-02/low_commercial02", 5, 6);
+$level.loadBuilding("commercial", "paris_restaurant", "/addons/paris/buildings/restaurant/restaurant", 8, 5);
+$level.loadBuilding("commercial", "paris_grocery-01", "/addons/paris/buildings/grocery/grocery01", 6, 6);
+$level.loadBuilding("commercial", "paris_grocery-02", "/addons/paris/buildings/grocery/grocery02", 4, 6);
+
+$level.loadBuilding("residential", "paris_detached-01", "/addons/paris/buildings/detached-01/detached_01", 6, 4);
+$level.loadBuilding("residential", "paris_detached-02", "/addons/paris/buildings/detached-02/detached02", 3, 7);
+$level.loadBuilding("residential", "paris_detached-03", "/addons/paris/buildings/detached-03/detached03", 4, 6);
+$level.loadBuilding("residential", "paris_semidetached-01", "/addons/paris/buildings/semi-detached-01/semi_detached01", 6, 8);
+$level.loadBuilding("residential", "paris_semidetached-02", "/addons/paris/buildings/semi-detached-02/semi_detached02", 7, 6);
+$level.loadBuilding("residential", "paris_apartment04", "/addons/paris/buildings/apartment-01/apartment_building_01", 6, 6);
+
+$level.loadBuilding("blockhouses", "paris_blockhouse01", "/addons/paris/buildings/blockhouses/blockhouse01", 6, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse02", "/addons/paris/buildings/blockhouses/blockhouse02", 6, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse03", "/addons/paris/buildings/blockhouses/blockhouse03", 9, 5);
+$level.loadBuilding("blockhouses", "paris_blockhouse-01", "/addons/paris/buildings/blockhouse-01/blockhouse01", 4, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse-01-b", "/addons/paris/buildings/blockhouse-01/blockhouse01-b", 6, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse-02", "/addons/paris/buildings/blockhouse-02/blockhouse02", 5, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse-02-b", "/addons/paris/buildings/blockhouse-02/blockhouse02-b", 6, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse-03", "/addons/paris/buildings/blockhouse-03/blockhouse03", 6, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse-03-b", "/addons/paris/buildings/blockhouse-03/blockhouse03-b", 6, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse-04", "/addons/paris/buildings/blockhouse-04/blockhouse04", 5, 5);
+$level.loadBuilding("blockhouses", "paris_blockhouse-04-b", "/addons/paris/buildings/blockhouse-04/blockhouse04-b", 5, 5);
+$level.loadBuilding("blockhouses", "paris_blockhouse-05", "/addons/paris/buildings/blockhouse-05/blockhouse05", 6, 6);
+$level.loadBuilding("blockhouses", "paris_blockhouse-05-b", "/addons/paris/buildings/blockhouse-05/blockhouse05-b", 6, 6);
+$level.loadBuilding("blockhouses", "paris_diagonalhouse1", "/addons/paris/buildings/diagonalhouses/diagonalhouse01");
+$level.loadBuilding("blockhouses", "paris_diagonalhouse2", "/addons/paris/buildings/diagonalhouses/diagonalhouse02", 7, 7);
+$level.loadBuilding("blockhouses", "paris_diagonalhouse3", "/addons/paris/buildings/diagonalhouses/diagonalhouse03");
+$level.loadBuilding("blockhouses", "paris_cornerhouse02", "/addons/paris/buildings/cornerhouse02/cornerhouse02", 6, 6);
+$level.loadBuilding("blockhouses", "paris_cityhouse01", "/addons/paris/buildings/cityhouse01/cityhouse01", 4, 5);
+$level.loadBuilding("blockhouses", "paris_cityhouse04", "/addons/paris/buildings/cityhouse04/cityhouse04", 7, 5);
+$level.loadBuilding("blockhouses", "paris_small-townbuilding01", "/addons/paris/buildings/small-townbuildings/small_town_bldg_01", 4, 5);
+$level.loadBuilding("blockhouses", "paris_small-townbuilding02", "/addons/paris/buildings/small-townbuildings/small_town_bldg_02", 4, 5);
+$level.loadBuilding("blockhouses", "paris_small-townbuilding03", "/addons/paris/buildings/small-townbuildings/small_town_bldg_03", 4, 5);
+$level.loadBuilding("blockhouses", "paris_small-townbuilding04", "/addons/paris/buildings/small-townbuildings/small_town_bldg_04", 5, 5);
+
+$level.loadBuilding("landmarks", "eiffel-tower", "/addons/paris/buildings/eiffel-tower/eiffel_tower");
+$level.loadBuilding("landmarks", "louvre-middle", "/addons/paris/buildings/louvre/louvre_middle01");
+$level.loadBuilding("landmarks", "louvre-side", "/addons/paris/buildings/louvre/louvre_side");
+$level.loadBuilding("landmarks", "louvre-pyramid", "/addons/paris/buildings/louvre/louvre_pyramid");
+$level.loadBuilding("landmarks", "notre-dame", "/addons/paris/buildings/notre-dame/notre_dame");
+$level.loadBuilding("landmarks", "arc-of-triumph", "/addons/paris/buildings/arc-of-triumph/arc_of_triumph");
+}
+
+// St. Petersburg
+if ($stpetersburg) {
+$level.loadBuilding("landmarks", "blood-church", "/addons/stpetersburg/buildings/blood-church/SaviorOnBlood_01");
+$level.loadBuilding("landmarks", "winter-palace", "/addons/stpetersburg/buildings/winter-palace/winter_palace01");
+$level.loadBuilding("landmarks", "st-isaacs", "/addons/stpetersburg/buildings/cathedral/st_isaacs01");
+}
+
+// London
+if ($london) {
+$level.loadBuilding("commercial", "restaurant-01", "/addons/london/buildings/restaurant/restaurant01", 6, 6);
+$level.loadBuilding("commercial", "restaurant-02", "/addons/london/buildings/restaurant/restaurant00", 4, 6);
+$level.loadBuilding("commercial", "lon-commercial01-b", "/addons/london/buildings/commercial-01-b/commercial01b", 3, 7);
+$level.loadBuilding("commercial", "lon-commercial04-b", "/addons/london/buildings/commercial-04-b/commercial04b", 4, 6);
+$level.loadBuilding("workplace", "office01", "/addons/london/buildings/office01/officebuilding01", 9, 20);
+$level.loadBuilding("workplace", "office02", "/addons/london/buildings/office02/officebuilding02", 12, 12);
+$level.loadBuilding("workplace", "office02-block", "/addons/london/buildings/office02/officebuilding02_block", 12, 6);
+$level.loadBuilding("workplace", "office02-corner", "/addons/london/buildings/office02/officebuilding02_corner", 6, 6);
+$level.loadBuilding("workplace", "office03", "/addons/london/buildings/office03/officebuilding03", 16, 10);
+$level.loadBuilding("workplace", "office04", "/addons/london/buildings/office04/officebuilding04", 10, 6);
+$level.loadBuilding("workplace", "office04-corner", "/addons/london/buildings/office04/officebuilding04_corner", 6, 6);
+$level.loadBuilding("workplace", "office05", "/addons/london/buildings/office05/officebuilding05", 13, 6);
+$level.loadBuilding("workplace", "lon-office-building04", "/addons/london/buildings/office-building04/office-building04", 11, 20);
+$level.loadBuilding("residential", "tenement-c01", "/addons/london/buildings/tenement01/tenement01", 3, 5);
+$level.loadBuilding("residential", "lon-tenement-01", "/addons/london/buildings/tenement-01/tenement01", 14, 14);
+$level.loadBuilding("residential", "lon-tenement-02", "/addons/london/buildings/tenement-02/tenement02");
+$level.loadBuilding("residential", "tenement-b01", "/addons/london/buildings/tenement-b01/tenement01", 8, 6);
+$level.loadBuilding("residential", "tenement-b03", "/addons/london/buildings/tenement-b03/tenement03", 7, 5);
+$level.loadBuilding("residential", "tenement-b04", "/addons/london/buildings/tenement-b04/tenement04", 8, 10);
+$level.loadBuilding("residential", "detachedhouse01", "/addons/london/buildings/detached01-02/detachedhouse01", 3, 4);
+$level.loadBuilding("residential", "detachedhouse02", "/addons/london/buildings/detached01-02/detachedhouse02", 3, 4);
+$level.loadBuilding("residential", "lon-detached01", "/addons/london/buildings/detachedhouse01-02/detached_houses01", 2, 6);
+$level.loadBuilding("residential", "lon-detached02", "/addons/london/buildings/detachedhouse01-02/detached_houses_NY_2", 3, 7);
+$level.loadBuilding("residential", "lon-detached03", "/addons/london/buildings/detachedhouse03-04/detached_houses_NY_3", 3, 7);
+$level.loadBuilding("residential", "detached04", "/addons/london/buildings/detachedhouse03-04/detached_houses_NY_4", 2, 7);
+$level.loadBuilding("residential", "semidetached01", "/addons/london/buildings/semidetached01-02/semidetached01", 4, 6);
+$level.loadBuilding("residential", "semidetached02", "/addons/london/buildings/semidetached01-02/semidetached02", 4, 6);
+$level.loadBuilding("residential", "semidetached03", "/addons/london/buildings/semidetached03-04/semidetached03", 4, 6);
+$level.loadBuilding("residential", "semidetached04", "/addons/london/buildings/semidetached03-04/semidetached04", 4, 6);
+$level.loadBuilding("residential", "apartmentbuilding01", "/addons/london/buildings/apartmentbuilding01/apartment_building01", 11, 8);
+$level.loadBuilding("residential", "lon-apartment04", "/addons/london/buildings/apartment-building-04/apartment_building01", 5, 4);
+$level.loadBuilding("residential", "apartment05", "/addons/london/buildings/apartment-building-05/apartment_building02", 7, 4);
+$level.loadBuilding("blockhouses", "blockhouse-01", "/addons/london/buildings/blockhouse01/blockhouse01", 4, 6);
+$level.loadBuilding("blockhouses", "blockhouse05", "/addons/london/buildings/blockhouse05-06-09/blockhouse05", 3, 7);
+$level.loadBuilding("blockhouses", "blockhouse06", "/addons/london/buildings/blockhouse05-06-09/blockhouse06", 3, 7);
+$level.loadBuilding("blockhouses", "diagonalhouse-2", "/addons/london/buildings/diagonalhouses/diagonalhouse02", 7, 7);
+
+$level.loadBuilding("landmarks", "gherkin", "/addons/london/buildings/gherkin/gherkin");
+$level.loadBuilding("landmarks", "bigben", "/addons/london/buildings/bigben-westminster/big_ben");
+$level.loadBuilding("landmarks", "westminster", "/addons/london/buildings/bigben-westminster/westminster");
+$level.loadBuilding("landmarks", "londoneye", "/addons/london/buildings/londoneye/londoneye");
+$level.loadBuilding("landmarks", "monument", "/addons/london/buildings/monument/monument");
+$level.loadBuilding("landmarks", "towerbridge", "/addons/london/buildings/towerbridge/towerbridge");
+$level.loadBuilding("landmarks", "buckingham-palace", "/addons/london/buildings/buckingham-palace/buckingham_palace");
+$level.loadBuilding("landmarks", "tower-of-london", "/addons/london/buildings/tower-of-london/toweroflondon");
+$level.loadBuilding("landmarks", "victoria-memorial", "/addons/london/buildings/victoria-memorial/VictoriaMemorial");
+$level.loadBuilding("landmarks", "waterloo-block", "/addons/london/buildings/waterloo-block/waterloo_block");
+}

@@ -1,0 +1,31 @@
+$envsets = [
+	"metro/envsets/default-roads.script",
+	"metro/envsets/default-stops.script",
+	"metro/envsets/default-foliage.script",
+	"metro/envsets/default-vehicles.script",
+	"metro/envsets/default-characters.script",
+	"addons/IsraelMod/envsets/buildings.script",
+	"addons/IsraelMod/envsets/props.script",
+	"addons/IsraelMod/envsets/vehicles.script"
+];
+
+// id, icon, base interest, duration (months), min bank level
+$availableBanks = [
+  ["leumi", "addons/IsraelMod/ui/hqpanel/leumi.dds", 5, 24, 1],
+  ["poalim", "addons/IsraelMod/ui/hqpanel/poalim.dds", 10, 60, 2],
+  ["beinleumi", "addons/IsraelMod/ui/hqpanel/beinleumi.dds", 8, 48, 3],
+  ["discount", "addons/IsraelMod/ui/hqpanel/discount.dds", 12, 96, 4]
+];
+
+MAIN.$saturation = 1.0;
+MAIN.$sceneClock.time = mktime(8,30,0);
+
+MAIN.$sky.fogColor = 0xCCC8BB;
+MAIN.$sky.fogOffset = 300.0;
+MAIN.$sky.fogDistance = 1500.0;
+
+MAIN.$sun.light.diffuse = 0xFFFFF0D0;
+MAIN.$sun.light.ambient = 0xFF202030;
+MAIN.$sun.light.specular = 0xFFFFFFDD;
+MAIN.$sun.light.magnitude = 2.5;
+

@@ -1,0 +1,41 @@
+this.width = 8;
+this.length = 16;
+this.flags = GRID_ITEM_COVER | GRID_ITEM_LOCK_GROUND;
+this.type = 0;
+this.storeMesh = false;
+
+event this.onLoaded::() {
+  this.setPathFlags("t-a0", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-a1", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-a2", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-a3", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-a4", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-a5", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-a6", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-a7", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b0", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b1", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b2", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b3", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b4", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b5", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b6", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-b7", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c0", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c1", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c2", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c3", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c4", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c5", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c6", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-c7", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d0", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d1", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d2", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d3", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d4", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d5", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d6", GRID_PATH_ROAD_LARGE);
+  this.setPathFlags("t-d7", GRID_PATH_ROAD_LARGE);
+}
+

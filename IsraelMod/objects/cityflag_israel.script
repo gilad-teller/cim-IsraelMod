@@ -1,0 +1,17 @@
+this.width = 1;
+this.height = 3;
+this.length = 1;
+this.flags = GRID_ITEM_OPTIONAL;
+this.diagonals = 0x0000;
+this.storeMesh = true;
+this.vertexGeneration = true;
+
+this.displayName = MAIN.$strings.$prop_flagpole;
+
+event this.onLoaded::() {
+  if ($mat = this.getMaterial("flags")) {
+    $mat.setShader("metro/shaders/effects/wave.shader");
+    //$mat.shaderParams = quat(0.0, -0.3, 0.0, 0.0);
+  }
+}
+

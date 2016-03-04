@@ -1,0 +1,6 @@
+
+$banks_leumi_name = "Leumi";
+$banks_poalim_name = "Hapoalim";
+$banks_beinleumi_name = "Habeinleumi";
+$banks_discount_name = "Discount";
+
